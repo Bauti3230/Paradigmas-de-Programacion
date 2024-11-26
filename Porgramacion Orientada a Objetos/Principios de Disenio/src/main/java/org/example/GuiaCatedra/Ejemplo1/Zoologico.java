@@ -1,4 +1,4 @@
-package org.example.Ejemplo1;
+package org.example.GuiaCatedra.Ejemplo1;
 
 /*
 Identificar y justificar todos los principios de diseño que se violan.

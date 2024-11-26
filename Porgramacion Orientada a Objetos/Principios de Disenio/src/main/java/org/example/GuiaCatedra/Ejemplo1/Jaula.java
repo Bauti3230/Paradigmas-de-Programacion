@@ -1,4 +1,4 @@
-package org.example.Ejemplo1;
+package org.example.GuiaCatedra.Ejemplo1;
 
 public class Jaula {
     private Animal habitante;
