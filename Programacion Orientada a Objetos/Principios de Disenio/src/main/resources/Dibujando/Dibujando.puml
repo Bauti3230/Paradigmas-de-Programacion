@@ -1,0 +1,29 @@
+@startuml
+
+class Compas {
++ Compas() : Compas
++ dibujasCirculoConRadio(radio : Integer)
+}
+
+class Circulo {
++caclcularRadio() : Integer
+}
+
+class Cartuchera {
+-pinceles : List<Pincel>
++getPinceles() : List<Pincel>
+}
+
+class Pincel {
+- color : Color
++seleccionarColor(color : Color)
++pintar(circulo : Circulo)
+}
+
+class Color
+
+Compas "1 " ..> "1 .. *" Circulo
+Cartuchera "1" o--> "0..*" Pincel
+Pincel "1"..> "1"Color
+Pincel "1" ..> "0..*" Circulo
+@enduml
