@@ -1,0 +1,12 @@
+Identificar todas las líneas que no correspondan al paradigma funcional, explicando por qué. Luego escribir un
+código en Scala que haga exactamente lo mismo pero utilizando el paradigma funcional.
+
+public int buscarUltimaOcurrencia(List<Integer> numeros, Integer buscado) {
+    int ultimaOcurrencia = -1;
+    for (int i=0; i<numeros.length(); ++i) {
+        if (numeros.get(i) == buscado) {
+            ultimaOcurrencia = i;
+        }
+    }
+    return ultimaOcurrencia;
+}

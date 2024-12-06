@@ -1,0 +1,10 @@
+Identificar todas las líneas que no correspondan al paradigma funcional, explicando por qué. Luego escribir un
+código en Scala que haga exactamente lo mismo pero utilizando conceptos puros del paradigma funcional.
+
+public static double calcularPromedio(List<Double> numeros) {
+    double suma = 0;
+    for (double numero : numeros) {
+        suma += numero;
+    }
+    return suma / numeros.size();
+}

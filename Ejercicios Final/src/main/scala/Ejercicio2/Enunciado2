@@ -1,0 +1,12 @@
+Identificar todas las líneas que no correspondan al paradigma funcional, explicando por qué. Luego escribir un
+código que haga exactamente lo mismo pero utilizando el paradigma funcional.
+
+public static <T> List<T> eliminarRepetidos(List<T> lista) {
+    List<T> listaSinRepetidos = new ArrayList<>();
+    for (T elemento : lista) {
+        if (!listaSinRepetidos.contains(elemento)) {
+            listaSinRepetidos.add(elemento);
+        }
+    }
+    return listaSinRepetidos;
+}

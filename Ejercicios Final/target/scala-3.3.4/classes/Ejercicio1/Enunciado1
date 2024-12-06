@@ -1,0 +1,12 @@
+Identificar todas las líneas que no correspondan al paradigma funcional, explicando por qué. Luego escribir un
+código que haga exactamente lo mismo pero utilizando el paradigma funcional.
+
+public static int sumarNumerosPares(List<Integer> numeros) {
+    int suma = 0;
+    for (int numero : numeros) {
+        if (numero % 2 == 0) {
+            suma += numero;
+        }
+    }
+    return suma;
+}
