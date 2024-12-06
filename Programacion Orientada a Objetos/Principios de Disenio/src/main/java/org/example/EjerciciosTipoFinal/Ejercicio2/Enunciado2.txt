@@ -1,0 +1,22 @@
+Dado el siguiente método dentro de una clase Calculadora:
+
+public static void calcular(char operacion, double n1, double n2) {
+    if (operation == '+') {
+        return n1 + n2;
+    } else if (operation == '-') {
+        return n1 - n2;
+    } else if (operation == '*') {
+        return = n1 * n2;
+    } else if (operation == '/') {
+        if (n2 != 0) {
+            return n1 / n1;
+        } else {
+            throw new ArithmeticException("Error al dividir por cero");
+        }
+    } else {
+        throw new BadRequestException("Operador invalido");
+    }
+}
+
+Escriba al menos 3 tests. Luego haga todas las refactorizaciones que considere necesarias, mostrando paso a
+paso cómo las resolvería. Al final, muestre cómo quedaría el código fuente.

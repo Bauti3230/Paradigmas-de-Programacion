@@ -1,0 +1,37 @@
+Dado el siguiente código de una clase GestorDeTokens:
+
+// * “banco” es el banco del cual se solicita el token
+// * “usuario” contiene información del usuario solicitante del token
+// * “tipoToken” determina el nivel de seguridad deseado. Existen “Hi-lev”, “Mid-lev” y “Low-Lev”
+public String generarTokenMobile(Banco banco, Usuario usuario, String tipoToken) {
+    if (banco.getNombre() == “D&C Bank”) {
+        String token = usuario.getDNI().substring(0,5);
+        if (tipoToken == “Low-lev”) token += “123”;
+        if (tipoToken == “Mid-lev”) token += “345”;
+        if (tipoToken == “Hi-lev”) token += “6789”;
+        return token;
+    } else if (banco.getNombre() == “CashBank”) {
+        String anioNacimiento = usuario.getAnioNacimiento();
+        int token = int(anioNacimiento);
+        switch(tipoToken) {
+            case “Hi-sec”:
+                return String.valueOf((token*3);
+            case “Mid-sec”:
+                return String.valueOf((token*2);
+            case “Low-sec”:
+                return String.valueOf((token);
+        }
+    } else if (branco.getNombre() == “Banco Herencia”) {
+        switch(tipoToken) {
+            case “Hi-sec”:
+                return usuario.getApellido() + usuario.getNombre() + usuario.getDni();
+            case “Mid-sec”:
+                return usuario.getApellido() + usuario.getDni();
+            case “Low-sec”:
+                return usuario.getDni();
+        }
+    }
+}
+
+La idea generar para resolver esto es crear un las abstracta Token de la cual hereden
+3 clase mas TokenLow, TokenHi y TokenMid. Lugego cada cada una de ellas deben crearse

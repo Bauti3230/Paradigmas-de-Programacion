@@ -1,0 +1,25 @@
+Dado el siguiente método dentro de una clase ValidadorContrasena:
+
+public boolean esContrasenaValida(String contrasena) {
+    if (contrasena.length() < 8) {
+        return false;
+    }
+
+    boolean tieneLetras = false;
+    boolean tieneNumeros = false;
+    boolean tieneCaracterEspecial = false;
+
+    for (char caracter : contrasena.toCharArray()) {
+        if (Character.isLetter(caracter)) {
+            tieneLetras = true;
+        } else if (Character.isDigit(caracter)) {
+            tieneNumeros = true;
+        } else if (caracter == ',' || caracter == '.' || caracter == ':' || caracter ==';') {
+            tieneCaracterEspecial = true;
+        }
+    }
+    return tieneLetras && tieneNumeros && tieneCaracterEspecial;
+}
+
+Escriba al menos 3 tests. Luego haga todas las refactorizaciones que considere necesarias, mostrando paso a
+paso cómo las resolvería. Al final, muestre cómo quedaría el código fuente.
